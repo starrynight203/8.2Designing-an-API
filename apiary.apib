@@ -3,35 +3,112 @@ HOST: http://polls.apiblueprint.org/
 
 # MajesticThai
 
-Polls is a simple API allowing consumers to view polls and vote in them.
+MajesticThai is a simple API allowing customers to view the menu items of Majestic Thai Restaurant.
 
-## Questions Collection [/questions]
+## Majestic Thai Collection [/#menu]
 
-### List All Questions [GET]
+### Menu Of Restaurant [GET]
 
 + Response 200 (application/json)
-
-        [
-            {
-                "question": "Favourite programming language?",
-                "published_at": "2015-08-05T08:40:51.620Z",
-                "choices": [
+                [
                     {
-                        "choice": "Swift",
-                        "votes": 2048
+                        "item": "Garden Rolls (5 pcs.) ",
+                        "description": "Stuffed with crystal thread noodles, carrot and cabbage then deep fried until golden brown and served with our sweet and sour sauce. ",
+                        "price": 595,
+                        "category": "appetizers",
+                        "id": 1
                     }, {
-                        "choice": "Python",
-                        "votes": 1024
+                        "item": "Edamame ",
+                        "description": "Steamed young soy bean. ",
+                        "price": 395,
+                        "category": "appetizers",
+                        "id": 2
                     }, {
-                        "choice": "Objective-C",
-                        "votes": 512
+                        "item": "Shrimp in the Blanket ",
+                        "description": "Marinated jumbo shrimp, wrapped in an egg roll skin and lightly fried. They are served with sweet and sour sauce. ",
+                        "price": 795,
+                        "category": "appetizers",
+                        "id": 3
                     }, {
-                        "choice": "Ruby",
-                        "votes": 256
+                        "item": "Thai Iced Coffee ",
+                        "description": "",
+                        "price": 250,
+                        "category": "drinks",
+                        "id": 4
+                    }, {
+                        "item": "Thai Iced Tea ",
+                        "description": "",
+                        "price": 250,
+                        "category": "drinks",
+                        "id": 5
+                    }, {
+                        "item": "Thai Iced Tea with Tapioca ",
+                        "description": "",
+                        "price": 350,
+                        "category": "drinks",
+                        "id": 6
+                    }, {
+                        "item": "Hot Tea (Jasmine) ",
+                        "description": "",
+                        "price": 200,
+                        "category": "drinks",
+                        "id": 7
+                    }, {
+                        "item": "Green Tea ",
+                        "description": "",
+                        "price": 250,
+                        "category": "drinks",
+                        "id": 8
+                    }, {
+                        "item": "Pad Thai ",
+                        "description": "One of the most famous Thai rice noodles dish cooked with egg, bean spouts, tofu and sprinkled with ground peanut. Choice of chicken, pork, tofu, mock chicken, beef, shrimp($2), roast duck ($4), or seafood ($6). ",
+                        "price": 895,
+                        "category": "entrees",
+                        "id": 9
+                    }, {
+                        "item": "Orange Chicken ",
+                        "description": "Deep fried chicken sauteed in a tangy orange sauce. Choice of chicken, pork, tofu, mock chicken, beef, shrimp($2), roast duck ($3.45), or seafood ($5.45). ",
+                        "price": 950,
+                        "category": "entrees",
+                        "id": 10
+                    }, {
+                        "item": "Sweet and Sour ",
+                        "description": "Stir fried with pineapple, bell peppers, onions, carrots, cucumbers, tomatoes, and home made sweet and sour sauce. Choice of chicken, pork, tofu, mock chicken, beef, shrimp($2), roast duck ($3.45), or seafood ($5.45). ",
+                        "price": 950,
+                        "category": "entrees",
+                        "id": 11
+                    }, {
+                        "item": "Pra Ram ",
+                        "description": "Steamed fresh spinach and broccoli, topped with our creamy peanut sauce. Choice of chicken, pork, tofu, mock chicken, beef, shrimp($2), roast duck ($3.45), or seafood ($5.45). ",
+                        "price": 950,
+                        "category": "entrees"
+                        "id": 12
+                    }, {
+                        "item": "Massaman Curry ",
+                        "description": "This is a favorite Thai curry with potatoes, onions, and peanuts in coconut milk. Choice of chicken, pork, tofu, mock chicken, beef, shrimp($2), roasted duck($3.45), or seafood ($5.45). ",
+                        "price": 950,
+                        "category": "entrees",
+                        "id": 13
+                    }, {
+                        "item": "Khanom Krok ",
+                        "description": "Creamy and fragrant bite-sized desserts cooked in a charcoal-heated pan with small craters, resulting in rich coconut cups. ",
+                        "price": 495,
+                        "category": "desserts",
+                        "id": 14
+                    }, {
+                       "item": "Woon Bai Toey ",
+                        "description": "Made out of the fragrant pandan leaf and layered with coconut cream jelly. Thai jellies are usually a little more “al dente” than your average Jell-O treat, which is why they hold their shapes so well. ",
+                        "price": 550,
+                        "category": "desserts",
+                        "id": 15
+                    }, {
+                        "item": "Tup Tim Krob (4 pcs.) ",
+                        "description": "Made of water chestnuts dipped in red food coloring, then tossed in cassava flour which gives it a soft, chewy exterior. The water chestnuts are then served in ice and coconut milk, which is lightly seasoned with salt. It’s perfect for a hot day. ",
+                        "price": 495,
+                        "category": "desserts",
+                        "id": 16
                     }
                 ]
-            }
-        ]
 
 ### Create a New Question [POST]
 
@@ -42,14 +119,60 @@ form of choices.
 + Request (application/json)
 
         {
-            "question": "Favourite programming language?",
-            "choices": [
-                "Swift",
-                "Python",
-                "Objective-C",
-                "Ruby"
-            ]
+            "item": "Garden Rolls (5 pcs.) ",
+            "price": 595
+        }, {
+            "item": "Edamame ",
+            "price": 395
+        }, {
+            "item": "Shrimp in the Blanket ",
+            "price": 795
+        }, {
+            "item": "Thai Iced Coffee ",
+            "price": 250
+        }, {
+            "item": "Thai Iced Tea ",
+            "price": 250
+        }, {
+            "item": "Thai Iced Tea with Tapioca ",
+            "price": 350
+        }, {
+            "item": "Hot Tea (Jasmine) ",
+            "price": 200
+        }, {
+            "item": "Green Tea ",
+            "price": 250
+        }, {
+            "item": "Pad Thai ",
+            "price": 895
+        }, {
+            "item": "Orange Chicken ",
+            "price": 950
+        }, {
+            "item": "Sweet and Sour ",
+            "price": 950
+        }, {
+            "item": "Pra Ram ",
+            "price": 950
+        }, {
+            "item": "Massaman Curry ",
+            "price": 950
+        }, {
+            "item": "Khanom Krok ",
+            "price": 495
+        }, {
+            "item": "Woon Bai Toey ",
+            "price": 550
+        }, {
+            "item": "Tup Tim Krob (4 pcs.) ",
+            "price": 495
         }
+        
+            
+        
+            
+        
+            
 
 + Response 201 (application/json)
 
